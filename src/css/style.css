@@ -1,0 +1,15 @@
+.b-img{
+    width: 100%;
+    height: 500px;
+}
+.pg-hed{
+    color: rgb(0, 145, 255);
+}
+.footer{
+    height: 300px;
+    margin-top: 50px;
+    background-color: aqua;
+    padding: 50px;
+    border-radius: 15px;
+   
+}
