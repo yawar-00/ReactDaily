@@ -5,9 +5,9 @@ const Layout = () => {
             <Link to="home">Home</Link>
             <Link to="about">About</Link>
             <Link to="contact">Contact</Link>
-            <hr color="red" />
+            <hr size="4" color="red" />
             <Outlet/>
-            <hr color="red" />
+            <hr size="4" color="red" />
             <h1>all right reserve</h1>
         </>
     )
