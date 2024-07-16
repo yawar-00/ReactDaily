@@ -384,15 +384,20 @@ function App(){
     // const myName=(fnm,snm)=>{
     //     alert("My name is "+fnm+" "+snm)
     // }
-    const myAdd=(n1,n2)=>{
-        alert(n1+n2)
+    // const myAdd=(n1,n2)=>{
+    //     alert(n1+n2)
+    // }
+    const myName=(nm,e)=>{
+        alert("My name is "+nm+" Type : "+e.type)
     }
   return(
     <>
       <h1>Welcome to Cybrom</h1>
        {/* <button onClick={display}>click me!</button>  */}
       {/* <button onClick={()=>{myName("Yawar","Hussain")}}>click me!</button> */}
-      <button onClick={()=>{myAdd(100,300)}}>click !</button>
+      
+      {/* <button onClick={()=>{myAdd(100,300)}}>click !</button> */}
+      <button onClick={(e)=>{myName("Yawar",e)}}>click me!</button>
     </>
   )
 }
