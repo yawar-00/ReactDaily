@@ -342,38 +342,55 @@
 
 // export default App;
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./components-rrd/Home";
-import About from "./components-rrd/About";
-import Contact from "./components-rrd/Contact";
-import AboutCompany from "./components-rrd/AboutCompany";
-import AboutProduct from "./components-rrd/AboutProduct";
-import AboutService from "./components-rrd/AboutService";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import Layout from "./Layout";
+// import Home from "./components-rrd/Home";
+// import About from "./components-rrd/About";
+// import Contact from "./components-rrd/Contact";
+// import AboutCompany from "./components-rrd/AboutCompany";
+// import AboutProduct from "./components-rrd/AboutProduct";
+// import AboutService from "./components-rrd/AboutService";
+
+// function App(){
+//   return(
+//     <>
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path="/" element={<Layout/>}>
+//               <Route index element={<Home/>}/>
+//               <Route path="home" element={<Home/>}/>
+//               <Route path="about" element={<About/>}>
+//                 <Route index element={<AboutCompany/>}/>
+//                 <Route path="aboutCompany" element={<AboutCompany/>}/>
+//                 <Route path="aboutProduct" element={<AboutProduct/>}/>
+//                 <Route path="aboutService" element={<AboutService/>}/>
+//               </Route>
+//               <Route path="contact" element={<Contact/>}/>
+//             </Route>    
+
+//         </Routes>
+
+//       </BrowserRouter>
+//     </>
+//   )
+// } 
+// export default App;
+
 
 function App(){
+    // function display(){
+    //   alert("Welcome to our collegee")
+    // }
+    const myName=(fnm,snm)=>{
+        alert("My name is "+fnm+" "+snm)
+    }
   return(
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout/>}>
-              <Route index element={<Home/>}/>
-              <Route path="home" element={<Home/>}/>
-              <Route path="about" element={<About/>}>
-                <Route index element={<AboutCompany/>}/>
-                <Route path="aboutCompany" element={<AboutCompany/>}/>
-                <Route path="aboutProduct" element={<AboutProduct/>}/>
-                <Route path="aboutService" element={<AboutService/>}/>
-              </Route>
-              <Route path="contact" element={<Contact/>}/>
-            </Route>    
-
-        </Routes>
-
-      </BrowserRouter>
+      <h1>Welcome to Cybrom</h1>
+      {/* <button onClick={display}>click me!</button> */}
+      <button onClick={()=>{myName("Yawar","Hussain")}}>click me!</button>
+      
     </>
   )
-} 
-export default App;
-
-
+}
+export default App
