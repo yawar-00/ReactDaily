@@ -387,8 +387,11 @@ function App(){
     // const myAdd=(n1,n2)=>{
     //     alert(n1+n2)
     // }
-    const myName=(nm,e)=>{
-        alert("My name is "+nm+" Type : "+e.type)
+    // const myName=(nm,e)=>{
+    //     alert("My name is "+nm+" Type : "+e.type)
+    // }
+    const myDisplay=(e)=>{
+      alert("Welcome "+e.target.name+" "+e.target.value+" "+e.target.type)
     }
   return(
     <>
@@ -397,7 +400,8 @@ function App(){
       {/* <button onClick={()=>{myName("Yawar","Hussain")}}>click me!</button> */}
       
       {/* <button onClick={()=>{myAdd(100,300)}}>click !</button> */}
-      <button onClick={(e)=>{myName("Yawar",e)}}>click me!</button>
+      {/* <button onClick={(e)=>{myName("Yawar",e)}}>click me!</button> */}
+      <button name="btn1" value="mybtn" onClick={myDisplay}>click me!</button>
     </>
   )
 }
