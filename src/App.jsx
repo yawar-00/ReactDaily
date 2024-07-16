@@ -381,15 +381,18 @@ function App(){
     // function display(){
     //   alert("Welcome to our collegee")
     // }
-    const myName=(fnm,snm)=>{
-        alert("My name is "+fnm+" "+snm)
+    // const myName=(fnm,snm)=>{
+    //     alert("My name is "+fnm+" "+snm)
+    // }
+    const myAdd=(n1,n2)=>{
+        alert(n1+n2)
     }
   return(
     <>
       <h1>Welcome to Cybrom</h1>
-      {/* <button onClick={display}>click me!</button> */}
-      <button onClick={()=>{myName("Yawar","Hussain")}}>click me!</button>
-      
+       {/* <button onClick={display}>click me!</button>  */}
+      {/* <button onClick={()=>{myName("Yawar","Hussain")}}>click me!</button> */}
+      <button onClick={()=>{myAdd(100,300)}}>click !</button>
     </>
   )
 }
