@@ -347,6 +347,9 @@ import Layout from "./Layout";
 import Home from "./components-rrd/Home";
 import About from "./components-rrd/About";
 import Contact from "./components-rrd/Contact";
+import AboutCompany from "./components-rrd/AboutCompany";
+import AboutProduct from "./components-rrd/AboutProduct";
+import AboutService from "./components-rrd/AboutService";
 
 function App(){
   return(
@@ -356,7 +359,12 @@ function App(){
           <Route path="/" element={<Layout/>}>
               <Route index element={<Home/>}/>
               <Route path="home" element={<Home/>}/>
-              <Route path="about" element={<About/>}/>
+              <Route path="about" element={<About/>}>
+                <Route index element={<AboutCompany/>}/>
+                <Route path="aboutCompany" element={<AboutCompany/>}/>
+                <Route path="aboutProduct" element={<AboutProduct/>}/>
+                <Route path="aboutService" element={<AboutService/>}/>
+              </Route>
               <Route path="contact" element={<Contact/>}/>
             </Route>    
 
