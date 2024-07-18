@@ -11,6 +11,8 @@
 
 
 
+
+
 // function App() {
 //       return(
 //         <>        
@@ -414,32 +416,51 @@
 //   )
 // }
 // export default App
-import { useEffect } from "react";
-import { useState } from "react"
+// import { useEffect } from "react";
+// import { useState } from "react"
+// function App(){
+//   // const[cnt,setCnt]=useState(0);
+//   // // useEffect(()=>{
+//   // //   setTimeout(()=>{  
+//   // //     setCnt(cnt+1)
+//   // //   },1000)
+//   // // })
+//   // useEffect( ()=>{
+//   //   setTimeout(()=>{  
+//   //         setCnt(cnt+1)
+//   //       },3000)
+//   // },[])
+//   const [cnt,setCnt]=useState(0);
+//   const [mul,setMul]=useState(0);
+//   useEffect(()=>{
+//       setMul(cnt*2)
+//   },[cnt])
+//   return(
+//     <>
+//     <h1>Welcome to Cybrom!! </h1>
+//     <h2>My counter :{cnt}</h2>
+//     <h2>My Multipler :{mul}</h2>
+//     <button onClick={()=>{setCnt(cnt+1)}}>click!</button>
+//     </>
+//   )
+// }
+// export default App
+
+import { useState } from "react";
 function App(){
-  // const[cnt,setCnt]=useState(0);
-  // // useEffect(()=>{
-  // //   setTimeout(()=>{  
-  // //     setCnt(cnt+1)
-  // //   },1000)
-  // // })
-  // useEffect( ()=>{
-  //   setTimeout(()=>{  
-  //         setCnt(cnt+1)
-  //       },3000)
-  // },[])
-  const [cnt,setCnt]=useState(0);
-  const [mul,setMul]=useState(0);
-  useEffect(()=>{
-      setMul(cnt*2)
-  },[cnt])
+  const [name,setName]=useState("")
+  const [city,setCity]=useState("")
+  const handleSubmit=()=>{
+    console.log({name:name, city:city});
+  }
   return(
     <>
-    <h1>Welcome to Cybrom!! </h1>
-    <h2>My counter :{cnt}</h2>
-    <h2>My Multipler :{mul}</h2>
-    <button onClick={()=>{setCnt(cnt+1)}}>click!</button>
+      Enter name : <input type="text" vlaue={name} onChange={(e)=>{setName(e.target.value)}} />
+      <br />
+      Enter city : <input type="text" vlaue={city} onChange={(e)=>{setCity(e.target.value)}} />
+      <br />
+      <button onClick={handleSubmit}>Submit</button>
     </>
   )
 }
-export default App
+export default App;
