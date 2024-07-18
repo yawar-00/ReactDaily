@@ -418,11 +418,16 @@ import { useEffect } from "react";
 import { useState } from "react"
 function App(){
   const[cnt,setCnt]=useState(0);
-  useEffect(()=>{
-    setTimeout(()=>{
-      setCnt(cnt+1)
-    },1000)
-  })
+  // useEffect(()=>{
+  //   setTimeout(()=>{  
+  //     setCnt(cnt+1)
+  //   },1000)
+  // })
+  useEffect( ()=>{
+    setTimeout(()=>{  
+          setCnt(cnt+1)
+        },3000)
+  },[])
   return(
     <>
     <h1>Welcome to Cybrom!! :{cnt}</h1>
