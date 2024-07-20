@@ -27,6 +27,13 @@
       "name": "vasu",
       "city": "bhopal",
       "fees": "45600"
+    },
+    {
+      "id": "2c30",
+      "rollno": "125",
+      "name": "Sohan",
+      "city": "jabalpur",
+      "fees": "65000"
     }
   ]
 }
