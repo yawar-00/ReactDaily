@@ -13,6 +13,7 @@
 
 
 
+
 // function App() {
 //       return(
 //         <>        
@@ -465,36 +466,69 @@
 // }
 // export default App;
 
-import { useState } from "react";
-import axios from "axios";
-function App(){
-  const [input,setInput]=useState({})
+// import { useState } from "react";
+// import axios from "axios";
+// function App(){
+//   const [input,setInput]=useState({})
   
-  const handleInput=(e)=>{
-    let name =e.target.name;
-    let value=e.target.value;
-    setInput((values)=>({...values ,[name]:value}))
-    console.log(input);
-  }
-  const handleSubmit=()=>{
-    let api="http://localhost:3000/student"
-    axios.post(api, input).then((res)=>{
-      console.log(res);
-      alert("data save !!")
-    })
-  }
+//   const handleInput=(e)=>{
+//     let name =e.target.name;
+//     let value=e.target.value;
+//     setInput((values)=>({...values ,[name]:value}))
+//     console.log(input);
+//   }
+//   const handleSubmit=()=>{
+//     let api="http://localhost:3000/student"
+//     axios.post(api, input).then((res)=>{
+//       console.log(res);
+//       alert("data save !!")
+//     })
+//   }
+//   return(
+//     <>
+//       Enter rollno : <input type="text" vlaue={input.rollno} name="rollno" onChange={handleInput} />
+//       <br />
+//       Enter name : <input type="text" vlaue={input.name} name="name" onChange={handleInput} />
+//       <br />
+//       Enter city : <input type="text" vlaue={input.city} name="city" onChange={handleInput} />
+//       <br />
+//       Enter fees : <input type="text" vlaue={input.fees} name="fees" onChange={handleInput} />
+//       <br />
+//       <button onClick={handleSubmit}>Submit</button>
+//     </>
+//   )
+// }
+// export default App;
+
+import { BrowserRouter ,Routes,Route } from "react-router-dom";
+
+import Contact from "./component new/Contact";
+import Home from "./component new/Home";
+import Layout from "./component new/Layout";
+import Insert from "./component new/Insert";
+import Display from "./component new/Display";
+import Search from "./component new/Search";
+import Update from "./component new/Update";
+
+function App(){
   return(
     <>
-      Enter rollno : <input type="text" vlaue={input.rollno} name="rollno" onChange={handleInput} />
-      <br />
-      Enter name : <input type="text" vlaue={input.name} name="name" onChange={handleInput} />
-      <br />
-      Enter city : <input type="text" vlaue={input.city} name="city" onChange={handleInput} />
-      <br />
-      Enter fees : <input type="text" vlaue={input.fees} name="fees" onChange={handleInput} />
-      <br />
-      <button onClick={handleSubmit}>Submit</button>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout/>}>
+              <Route index element={<Home/>}/>
+              <Route path="home" element={<Home/>}/>
+              <Route path="insert" element={<Insert/>}/>
+              <Route path="display" element={<Display/>}/>
+              <Route path="search" element={<Search/>}/>
+              <Route path="update" element={<Update/>}/>
+              <Route path="contact" element={<Contact/>}/>
+            </Route>    
+
+        </Routes>
+      </BrowserRouter>
     </>
   )
-}
+} 
 export default App;
+
