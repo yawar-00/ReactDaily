@@ -12,7 +12,8 @@ const Insert = () => {
         setInput((values) => ({ ...values, [name]: value }))
         console.log(input);
     }
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         let api = "http://localhost:3000/student"
         axios.post(api, input).then((res) => {
             console.log(res);
@@ -29,7 +30,7 @@ const Insert = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Enter Name</Form.Label>
-                    <Form.Control  type="text" vlaue={input.rollno} name="rollno" onChange={handleInput} />
+                    <Form.Control  type="text" vlaue={input.name} name="name" onChange={handleInput} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Enter city</Form.Label>

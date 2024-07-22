@@ -17,7 +17,7 @@ const Layout = () => {
                         <Nav.Link as={Link} to="search">Search</Nav.Link>
                         <Nav.Link as={Link} to="update">Update</Nav.Link>
                         <Nav.Link as={Link} to="contact">Contact</Nav.Link>
-                    </Nav>
+                    </Nav>+
                 </Container>
             </Navbar>
             <hr size="4" color="blue" />

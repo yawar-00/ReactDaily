@@ -12,7 +12,7 @@
       "rollno": 122,
       "name": "yawar",
       "city": "bhopal",
-      "fees": 40000
+      "fees": 45000
     },
     {
       "id": "5bb2",
@@ -26,7 +26,7 @@
       "rollno": "124",
       "name": "vasu",
       "city": "bhopal",
-      "fees": "45600"
+      "fees": "47600"
     },
     {
       "id": "2c30",
@@ -36,10 +36,11 @@
       "fees": "65000"
     },
     {
-      "id": "6d5f",
-      "rollno": "yawar",
+      "id": "7bb2",
+      "rollno": "126",
+      "name": "yawar hussain",
       "city": "indore",
-      "fees": "100000"
+      "fees": "48000"
     }
   ]
 }
