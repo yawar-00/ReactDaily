@@ -1,6 +1,6 @@
 const Contact=()=>{
     return(
-        <h1>This is insert page</h1>
+        <h1>This is Contact page</h1>
     )
 }
 export default Contact
